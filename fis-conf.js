@@ -1,3 +1,21 @@
+//Step 1. 取消下面的注释开启simple插件，注意需要先进行插件安装 npm install -g fis-postpackager-simple
+fis.config.set('modules.postpackager', 'simple');
+//css sprite
+fis.config.set('modules.spriter', 'csssprites');
+
+/*sass*/
+//sass scss配置
+// sass表示使用fis-parser-sass
+//项目排除掉_xxx.scss，这些属于框架文件，不用关心
+fis.config.set('project.exclude', ['**/_*.scss','dist/**']);
+//scss后缀的文件，用fis-parser-sass插件编译
+fis.config.set('modules.parser.scss', 'sass');
+//scss文件产出为css文件
+fis.config.set('roadmap.ext.scss', 'css');
+
+//Step 3. 取消下面的注释可以开启simple对零散资源的自动合并
+fis.config.set('settings.postpackager.simple.autoCombine', true);
+
 //定义开发规范
 fis.config.set('roadmap.path', [
     {

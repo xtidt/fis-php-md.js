@@ -1,0 +1,1 @@
+define("mod/bar.js",function(n,e,o){o.exports=function(n){return $(n)}});
